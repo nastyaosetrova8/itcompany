@@ -1,0 +1,20 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Example"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, uk {🇺🇦 UK} en {🇺🇸 EN} other {Unknown}}"
+  },
+  "LocaleLayout": {
+    "title": "ITCompany"
+  },
+  "Manifest": {
+    "name": "next-intl example"
+  },
+  "NotFoundPage": {
+    "title": "Page not found",
+    "description": "Please double-check the browser address bar or use the navigation to go to a known page."
+  }
+}
