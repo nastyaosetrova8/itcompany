@@ -1,25 +1,27 @@
-import localFont from "next/font/local";
-import "./globals.css";
+// import localFont from "next/font/local";
+// import "./globals.css";
+import { poppins, questrial } from "../fonts";
 import { NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
   getTranslations,
   unstable_setRequestLocale,
 } from "next-intl/server";
-import { routing } from "@/i18n/routing";
 import { ReactNode } from "react";
+import { routing } from "@/i18n/routing";
+import Navigation from "../components/Navigation/Navigation";
 
-const geistSans = localFont({
-  src: "../fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "../fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-// -------------------------------------
+// const geistSans = localFont({
+//   src: "../fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "../fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
+// // -------------------------------------
 // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 
 type Props = {
@@ -39,10 +41,8 @@ export async function generateMetadata({
   params: { locale },
 }: Omit<Props, "children">) {
   const t = await getTranslations({ locale, namespace: "LocaleLayout" });
-
   return {
     title: t("title"),
-    // description: t("description"),
   };
 }
 
@@ -58,11 +58,10 @@ export default async function LocaleLayout({
 
   return (
     <html className="h-full" lang={locale}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${poppins.variable} ${questrial.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
+          <Navigation />
         </NextIntlClientProvider>
       </body>
     </html>

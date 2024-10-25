@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import { ChangeEvent, ReactNode, useTransition } from "react";
 import { Locale, usePathname, useRouter } from "@/i18n/routing";
-import { useParams } from "next/navigation";
+// import { useParams } from "next/navigation";
 
 type Props = {
   children: ReactNode;
@@ -15,14 +15,14 @@ const LocaleSwitcherSelect = ({ children, defaultValue, label }: Props) => {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
-  console.log("🚀 ~ LocaleSwitcherSelect ~ pathname:", pathname);
-  const params = useParams();
-  console.log("🚀 ~ LocaleSwitcherSelect ~ params:", params);
+  // console.log("🚀 ~ LocaleSwitcherSelect ~ pathname:", pathname);
+  // const params = useParams();
+  // console.log("🚀 ~ LocaleSwitcherSelect ~ params:", params);
 
   const onSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
     // const nextLocale = e.target.value.toLowerCase();
     const nextLocale = e.target.value as Locale;
-    console.log("🚀 ~ onSelectChange ~ nextLocale:", nextLocale);
+    // console.log("🚀 ~ onSelectChange ~ nextLocale:", nextLocale);
     // router.replace(`/${locale}`);
     // const currentLocale = params.locale as Locale;
     startTransition(() => {

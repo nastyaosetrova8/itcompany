@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import LocaleSwitcher from "./components/LocaleSwitcher";
 import { unstable_setRequestLocale } from "next-intl/server";
+import LocaleSwitcher from "../components/LocaleSwitcher/LocaleSwitcher";
 
 type Props = {
   params: { locale: string };

@@ -16,5 +16,17 @@
   "NotFoundPage": {
     "title": "Page not found",
     "description": "Please double-check the browser address bar or use the navigation to go to a known page."
+  },
+  "Error": {
+    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
+    "title": "Something went wrong!"
+  },
+  "Navigation": {
+    "home": "Home",
+    "introduction": "Introduction",
+    "mission": "Mission & vission",
+    "services": "Services",
+    "culture": "Culture",
+    "clients": "Clients"
   }
 }
