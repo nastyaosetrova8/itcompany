@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import { unstable_setRequestLocale } from "next-intl/server";
 import LocaleSwitcher from "../components/LocaleSwitcher/LocaleSwitcher";
 
@@ -13,18 +12,20 @@ export default function Home({ params: { locale } }: Props) {
   const t = useTranslations("HomePage");
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <section className="bg-[url('/images/mainBG.webp')] bg-cover bg-center w-full h-screen mx-auto">
+      <div className="container flex justify-center items-center ">
+        {/* p-8 pb-20 gap-16 sm:p-20 */}
+        {/* font-[family-name:var(--font-poppins)] */}
+        {/* min-h-screen  grid grid-rows-[20px_1fr_20px] justify-items-center*/}
+        {/* <div className="flex flex-col gap-8 row-start-2 items-center sm:items-start"> */}
         {/* ---------Title------------ */}
         <h1 className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44 uppercase">
           {t("title")}
         </h1>
-
         <LocaleSwitcher />
-
         {/* --------------------- */}
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+        {/* </div> */}
+        {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -70,8 +71,9 @@ export default function Home({ params: { locale } }: Props) {
           />
           Go to nextjs.org →
         </a>
-      </footer>
-    </div>
+      </footer> */}
+      </div>
+    </section>
   );
 }
 

@@ -8,12 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "20px",
+          sm: "10px",
+          md: "20px",
+          lg: "30px",
+        },
+      },
       fontFamily: {
-        poppins: ["var(--font-poppins)"],
-        questrial: ["var(--font-questrial)"],
+        poppins: ["var(--font-poppins)", "serif"],
+        roboto: ["var(--font-roboto)", "sans-serif"],
       },
       fontSize: {
-        s: ["12px", { lineHeight: "1" }],
+        s: ["14px", { lineHeight: "1" }],
         l: ["60px", { lineHeight: "1.2" }],
       },
       colors: {

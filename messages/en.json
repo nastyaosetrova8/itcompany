@@ -21,7 +21,11 @@
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
     "title": "Something went wrong!"
   },
+  "Slogan": {
+    "slogan": "Innovation Engineered for Your Success"
+  },
   "Navigation": {
+    "getStarted": "Get started",
     "home": "Home",
     "introduction": "Introduction",
     "mission": "Mission & vission",

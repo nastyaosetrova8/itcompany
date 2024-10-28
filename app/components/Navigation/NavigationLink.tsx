@@ -14,17 +14,17 @@ const NavigationLink: React.FC<ComponentProps<typeof Link>> = ({
   const isActive = pathname === href;
 
   return (
-    <div>
+    <>
       <Link
         aria-current={isActive ? "page" : undefined}
         className={clsx(
-          "inline-block p-2 text-red transition-colors",
+          "inline-block whitespace-nowrap py-3 px-5 text-xs transition-colors rounded-full",
           isActive ? "bg-customTealAccent" : "bg-transparent"
         )}
         href={href}
         {...rest}
       />
-    </div>
+    </>
   );
 };
 

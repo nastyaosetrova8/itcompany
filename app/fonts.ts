@@ -1,13 +1,13 @@
-import { Poppins, Questrial } from "next/font/google";
+import { Poppins, Roboto } from "next/font/google";
 
 export const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
-  weight: ["400", "500", "700", "800"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-export const questrial = Questrial({
+export const questrial = Roboto({
   subsets: ["latin"],
-  variable: "--font-questrial",
-  weight: "400",
+  variable: "--font-roboto",
+  weight: ["400", "500", "700", "900"],
 });
