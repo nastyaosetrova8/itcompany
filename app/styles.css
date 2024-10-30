@@ -2,52 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  display: block;
-  height: auto;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-a {
-  color: inherit;
-  display: block;
-  text-decoration: none;
-}
-
-/* a:focus,
-button:focus {
-  outline: 1px solid transparent;
-} */
-
 button {
   padding: 0;
-  border: none;
-  background-color: transparent;
   font: inherit;
+  border: none;
   cursor: pointer;
 }
 
-address {
-  font-style: normal;
+.scroll-containerCl::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+.scroll-containerCl {
+  scrollbar-width: none; /* Firefox */
 }
 
-.hidden {
+@layer base {
+  /* body {
+    margin: 0;
+    font-size: 14px;
+    color: rgb(41 37 36);
+  } */
+}
+
+@layer components {
+  /* .section {
+    @apply flex items-center justify-center;
+  } */
+  .titleCl {
+    @apply mb-5 font-semibold text-4xl leading-tight text-stone-950;
+  }
+  .subTitleCl {
+    @apply mb-6 font-semibold text-xl leading-relaxed text-customTeal;
+  }
+  .descriptionCl {
+    @apply mb-5 leading-7;
+  }
+}
+
+@layer utilities {
+}
+
+/* .hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -58,9 +53,9 @@ address {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
+} */
 
-.overlay {
+/* .overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -68,8 +63,8 @@ address {
   height: 100%;
   display: flex;
   z-index: 1000;
-}
+} */
 
-.no-scroll {
+/* .no-scroll {
   overflow: hidden;
-}
+} */

@@ -1,4 +1,4 @@
-import { poppins } from "../fonts";
+import { poppins, roboto } from "../fonts";
 import { NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
@@ -41,7 +41,13 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className="h-full">
-      <body className={clsx(poppins.className, "h-full text-s")}>
+      <body
+        className={clsx(
+          roboto.variable,
+          poppins.variable,
+          "h-full text-s font-poppins text-stone-800"
+        )}
+      >
         <NextIntlClientProvider messages={messages}>
           <main>{children}</main>
           <Navigation />

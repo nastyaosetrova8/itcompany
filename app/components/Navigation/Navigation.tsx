@@ -4,6 +4,7 @@ import { useTranslations } from "use-intl";
 import NavigationLink from "./NavigationLink";
 import { Link, usePathname } from "@/i18n/routing";
 import ArrowRight from "@/public/icons/arrow-right.svg";
+import LocaleSwitcher from "../LocaleSwitcher/LocaleSwitcher";
 
 const Navigation = () => {
   const t = useTranslations("Navigation");
@@ -17,8 +18,10 @@ const Navigation = () => {
           <div className="flex items-center justify-between p-6 text-stone-950 bg-customTeal rounded-3xl">
             {/* className="fixed bottom-[34px] left-1/2 -translate-x-1/2 flex items-center justify-between p-6 text-stone-950 bg-customTeal rounded-3xl z-100" */}
             <div className="flex items-center gap-6">
-              <div className="w-12 h-12 rounded-full border border-white"></div>
-              <p className="font-roboto font-semibold text-medium leading-relaxed text-white w-48">
+              {/* <div className="w-12 h-12 rounded-full border border-white"> */}
+              <LocaleSwitcher />
+              {/* </div> */}
+              <p className="font-semibold text-medium leading-relaxed text-white w-48">
                 {tSlogan("slogan")}
               </p>
             </div>
