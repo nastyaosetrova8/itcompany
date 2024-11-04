@@ -28,7 +28,7 @@
     "getStarted": "Get started",
     "home": "Home",
     "introduction": "Introduction",
-    "mission": "Mission & vission",
+    "projects": "Projects",
     "services": "Services",
     "culture": "Culture",
     "clients": "Clients"
@@ -38,6 +38,7 @@
     "title": "Creating Unique Web Solutions for Your Business",
     "p1": "Welcome to ITCompany — your trusted web studio specializing in website development that helps businesses reach new heights. We create modern, effective, and visually appealing web solutions that highlight your brand’s uniqueness and engage your customers. Our team consists of creative designers, experienced developers, and strategists who bring websites of any complexity to life — from landing pages and corporate websites to e-commerce stores and complex platforms.",
     "p2": "We stay up-to-date with the latest web design trends, ensuring responsiveness, fast loading times, and high functionality in our products. Each project is tailored to the client’s needs, focused on user-friendliness, and provides the best possible experience for visitors.",
-    "p3": "At ITCompany, we strive not only to build a website for you but to become your partner in achieving success in the digital world."
+    "p3": "At ITCompany, we strive not only to build a website for you but to become your partner in achieving success in the digital world.",
+    "scroll": "Scroll"
   }
 }
