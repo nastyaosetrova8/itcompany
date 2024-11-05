@@ -12,69 +12,99 @@ export default function Home({ params: { locale } }: Props) {
 
   return (
     <section className="bg-main-sectionBG ">
-      <div className="container flex justify-center items-center bg-[url('/images/mainBG.webp')] bg-cover bg-center bg-no-repeat w-full h-screen">
-        {/* p-8 pb-20 gap-16 sm:p-20 */}
-        {/* font-[family-name:var(--font-poppins)] */}
-        {/* min-h-screen  grid grid-rows-[20px_1fr_20px] justify-items-center*/}
-        {/* <div className="flex flex-col gap-8 row-start-2 items-center sm:items-start"> */}
-        {/* ---------Title------------ */}
-        <h1 className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44 uppercase">
-          {t("title")}
-        </h1>
-        {/* --------------------- */}
-        {/* </div> */}
-        {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer> */}
+      <div className="container flex bg-[url('/images/mainBG.webp')] bg-cover bg-center bg-no-repeat w-full h-screen">
+        <div className="pt-64">
+          <h1 className="mainTitleCl">{t("title")}</h1>
+          <p className="mainDescriptionCl">{t("description")}</p>
+        </div>
+        <div>
+          <video
+            className="w-[680px] h-screen -mr-[30px]"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/videos/mainPage.mp4" type="video/mp4" />
+            Ваш браузер не підтримує відтворення відео.
+          </video>
+        </div>
       </div>
     </section>
   );
 }
 
+// ==============================================================
+// ==============================================================
+
+// return (
+//   <section className="bg-main-sectionBG ">
+//     <div className="container flex justify-center items-center  bg-[url('/images/mainBG.webp')] bg-cover bg-center bg-no-repeat w-full h-screen">
+//       {/* p-8 pb-20 gap-16 sm:p-20 */}
+//       {/* font-[family-name:var(--font-poppins)] */}
+//       {/* min-h-screen  grid grid-rows-[20px_1fr_20px] justify-items-center*/}
+//       {/* <div className="flex flex-col gap-8 row-start-2 items-center sm:items-start"> */}
+//       {/* ---------Title------------ */}
+//       <div>
+//         <h1 className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44 uppercase">
+//           {t("title")}
+//         </h1>
+//         <p>{t("description")}</p>
+//       </div>
+//       {/* --------------------- */}
+//       {/* </div> */}
+//       {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+//         <a
+//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+//           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           <Image
+//             aria-hidden
+//             src="https://nextjs.org/icons/file.svg"
+//             alt="File icon"
+//             width={16}
+//             height={16}
+//           />
+//           Learn
+//         </a>
+//         <a
+//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+//           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           <Image
+//             aria-hidden
+//             src="https://nextjs.org/icons/window.svg"
+//             alt="Window icon"
+//             width={16}
+//             height={16}
+//           />
+//           Examples
+//         </a>
+//         <a
+//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+//           href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           <Image
+//             aria-hidden
+//             src="https://nextjs.org/icons/globe.svg"
+//             alt="Globe icon"
+//             width={16}
+//             height={16}
+//           />
+//           Go to nextjs.org →
+//         </a>
+//       </footer> */}
+//     </div>
+//   </section>
+// );
+
+// ==============================================================
 // ==============================================================
 
 //  <Image

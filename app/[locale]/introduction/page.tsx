@@ -9,10 +9,10 @@ const IntroductionPage: React.FC<Props> = async ({ params: { locale } }) => {
   const t = await getTranslations("Introduction");
 
   return (
-    <section className="h-screen flex items-center bg-neutral-300">
-      <div className="container relative flex justify-center items-center bg-[url('/images/containerBGSecondary3.webp')] bg-cover bg-center bg-no-repeat h-dynamic w-full">
+    <section className="h-screen flex items-center justify-center bg-neutral-300">
+      <div className="container relative flex justify-end items-center bg-[url('/images/containerBGSecondary3.webp')] bg-cover bg-center bg-no-repeat h-screen xl:max-w-[90%] w-full">
         <div className="absolute top-[7%] left-[6%] bottom-[18%] xl:max-w-[590px] w-full bg-neutral-100 rounded-3xl">
-          <div className="w-full h-full px-16 pt-11 pb-40  overflow-y-auto scroll-containerCl">
+          <div className="w-full h-full px-16 pt-11 pb-40 overflow-y-auto scroll-containerCl">
             {/* <div className="absolute top-[7%] left-[6%] bottom-[18%] xl:max-w-[590px] w-full px-16 pt-11 pb-40 bg-neutral-100 rounded-3xl overflow-y-auto scroll-containerCl"> */}
             <p className="subTitleCl">{t("introduction") || ""}</p>
             <h1 className="titleCl ">{t("title") || ""}</h1>
@@ -26,7 +26,12 @@ const IntroductionPage: React.FC<Props> = async ({ params: { locale } }) => {
             </p>
           </div>
         </div>
-        <div></div>
+        <div className="w-[800px] -mr-[30px]">
+          <video className="w-full h-auto" autoPlay loop muted playsInline>
+            <source src="/videos/introductionPage.mp4" type="video/mp4" />
+            Ваш браузер не підтримує відтворення відео.
+          </video>
+        </div>
       </div>
     </section>
   );

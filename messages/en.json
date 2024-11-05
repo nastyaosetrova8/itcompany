@@ -1,7 +1,7 @@
 {
   "HomePage": {
-    "title": "Hello world!",
-    "about": "Example"
+    "title": "ITCompany",
+    "description": "Let's implement the idea together"
   },
   "LocaleSwitcher": {
     "label": "Change language",
@@ -40,5 +40,6 @@
     "p2": "We stay up-to-date with the latest web design trends, ensuring responsiveness, fast loading times, and high functionality in our products. Each project is tailored to the client’s needs, focused on user-friendliness, and provides the best possible experience for visitors.",
     "p3": "At ITCompany, we strive not only to build a website for you but to become your partner in achieving success in the digital world.",
     "scroll": "Scroll"
-  }
+  },
+  "Projects": {}
 }
