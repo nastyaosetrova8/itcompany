@@ -27,9 +27,9 @@ const config: Config = {
           lg: "30px",
         },
       },
-      height: {
-        dynamic: "clamp(60vh, 80vh, 100vh)",
-      },
+      // height: {
+      //   dynamic: "clamp(60vh, 80vh, 100vh)",
+      // },
       fontFamily: {
         poppins: ["var(--font-poppins)", "serif"],
         roboto: ["var(--font-roboto)", "sans-serif"],
