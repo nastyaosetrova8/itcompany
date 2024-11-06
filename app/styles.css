@@ -16,6 +16,14 @@ button {
   scrollbar-width: none; /* Firefox */
 }
 
+.imageFadeCl {
+  transition: opacity 2s ease-in-out;
+}
+
+.imageHiddenCl {
+  opacity: 0;
+}
+
 @layer base {
   /* body {
     margin: 0;
@@ -44,6 +52,9 @@ button {
   .descriptionCl {
     @apply mb-5 leading-7;
   }
+  /* .imageFadeCl {
+    @apply transition-opacity duration-500;
+  } */
 }
 
 @layer utilities {

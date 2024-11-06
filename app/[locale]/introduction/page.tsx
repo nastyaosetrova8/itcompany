@@ -7,10 +7,11 @@ type Props = {
 const IntroductionPage: React.FC<Props> = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
   const t = await getTranslations("Introduction");
+  
 
   return (
     <section className="h-screen flex items-center justify-center bg-neutral-300">
-      <div className="container relative flex justify-end items-center bg-[url('/images/containerBGSecondary3.webp')] bg-cover bg-center bg-no-repeat h-screen xl:max-w-[90%] w-full">
+      <div className="container relative flex justify-end items-center h-screen xl:max-w-[90%] w-full bg-[url('/images/containerBGSecondary3.webp')] bg-cover bg-center bg-no-repeat">
         <div className="absolute top-[7%] left-[6%] bottom-[18%] xl:max-w-[590px] w-full bg-neutral-100 rounded-3xl">
           <div className="w-full h-full px-16 pt-11 pb-40 overflow-y-auto scroll-containerCl">
             {/* <div className="absolute top-[7%] left-[6%] bottom-[18%] xl:max-w-[590px] w-full px-16 pt-11 pb-40 bg-neutral-100 rounded-3xl overflow-y-auto scroll-containerCl"> */}
