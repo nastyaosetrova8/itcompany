@@ -37,7 +37,7 @@ const Navigation = () => {
           </div>
         </div>
       ) : (
-        <nav className="fixed bottom-[34px] left-1/2 -translate-x-1/2 flex justify-center p-2 text-white bg-customTeal rounded-full z-100">
+        <nav className="fixed bottom-[34px] left-1/2 -translate-x-1/2 flex justify-center p-2 text-white bg-customTeal rounded-full z-50">
           <NavigationLink href="/">{t("home")}</NavigationLink>
           <NavigationLink href="/introduction">
             {t("introduction")}
