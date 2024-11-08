@@ -48,21 +48,21 @@
         "id": "1",
         "title": "Bank Hotel",
         "description": "While working on the Bank Hotel website, our team aimed to develop an appealing, intuitive interface that is easy to navigate and evokes a sense of hospitality. The main goal was to convey the brand's atmosphere of luxury and professionalism, providing users with a seamless browsing experience that fully meets client expectations.",
-        "src": "/images/mainBG.webp",
+        "src": "/images/bankHotel.png",
         "alt": "Images of pages of the hotel website"
       },
       "2": {
         "id": "2",
         "title": "Envent",
-        "description": "We focused on creating an attractive, modern design that highlights the company’s commitment and professionalism. We actively used corporate colors and style elements to build a cohesive image and enhance brand recognition, crafting a harmonious, professional look that reflects the company’s core values and identity.",
-        "src": "/images/containerBGSecondary.webp",
+        "description": "We focused on creating an attractive, modern design that highlights the company’s commitment and professionalism. We actively used corporate colors and style elements to build a cohesive image and enhance brand recognition, crafting a harmonious, professional look that reflects the company’s core values and identity. 11111111 We focused on creating an attractive, modern design that highlights the company’s commitment and professionalism. We actively used corporate colors and style elements to build a cohesive image and enhance brand recognition, crafting a harmonious, professional look that reflects the company’s core values and identity.",
+        "src": "/images/_.jpeg",
         "alt": "Images of pages of the Envent website"
       },
       "3": {
         "id": "3",
         "title": "HOHO",
         "description": "While working on the Bank Hotel website, our team aimed to develop an appealing, intuitive interface that is easy to navigate and evokes a sense of hospitality. The main goal was to convey the brand's atmosphere of luxury and professionalism, providing users with a seamless browsing experience that fully meets client expectations.",
-        "src": "/images/containerBGSecondary4.webp",
+        "src": "/images/color.jpeg",
         "alt": "Images of pages of the hotel website"
       }
     }
