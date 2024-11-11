@@ -9,7 +9,6 @@ const ProjectCard: React.FC<IPropsProjectItem> = ({
   scrollText,
 }) => {
   const contentRef = useRef<HTMLParagraphElement>(null);
-  console.log("🚀 ~ contentRef:", contentRef);
   const [showScrollText, setShowScrollText] = useState(false);
 
   useEffect(() => {
@@ -22,11 +21,11 @@ const ProjectCard: React.FC<IPropsProjectItem> = ({
   return (
     <>
       <div className="flex flex-col h-full">
-        <h2 className="titleCl font-medium mb-6">{title}</h2>
+        <h2 className="subTitleCl text-4xl text-stone-950">{title}</h2>
         {/* <p className="descriptionCl overflow-y-auto">{description}</p> */}
         <p
           ref={contentRef}
-          className="descriptionCl scroll-containerCl overflow-y-auto"
+          className="descriptionCl leading-7 scroll-containerCl overflow-y-auto"
         >
           {/* flex-grow  max-h-[250px] */}
           {description}
