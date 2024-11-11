@@ -84,8 +84,9 @@ const ProjectsPage: React.FC<Props> = () => {
 
   return (
     <section className="h-screen flex items-center justify-center bg-neutral-300">
-      <div className="flex justify-end items-center h-screen xl:max-w-[90%] w-full bg-[url('/images/containerBGSecondary3.webp')] bg-cover bg-center bg-no-repeat">
-        <div className="container relative flex gap-11 justify-between h-[70%] w-[90%] pl-20 pr-11 bg-neutral-100 rounded-3xl ">
+      <div className="flex items-center h-screen xl:max-w-[90%] w-full bg-[url('/images/containerBGSecondary3.webp')] bg-cover bg-center bg-no-repeat">
+        {/* justify-end */}
+        <div className="xl:container relative flex gap-11 justify-between h-[70%] w-[90%] pl-16 pr-11 bg-neutral-100 rounded-3xl ">
           <div className="pb-11 pt-10 flex xl:max-w-[560px] w-full flex-col">
             {/* xl:max-w-[420px] w-full xl:max-h-[360px] h-full */}
             <h1 className="mainDescriptionCl font-bold text-stone-950">
@@ -135,7 +136,7 @@ const ProjectsPage: React.FC<Props> = () => {
           </div>
           <ul
             ref={containerRef}
-            className="xl:max-w-[560px] w-full flex flex-col gap-4 py-11 overflow-y-auto scroll-containerCl"
+            className="xl:max-w-[568px] w-full flex flex-col gap-4 py-11 overflow-y-auto scroll-containerCl"
           >
             {projects.map((project, index) => (
               <li
@@ -143,7 +144,7 @@ const ProjectsPage: React.FC<Props> = () => {
                   cardRefs.current[index] = ref;
                 }}
                 key={project.id}
-                className="relative w-full xl:h-[371px] py-10 px-14 bg-white rounded-3xl"
+                className="relative w-full xl:h-[388px] py-10 px-14 bg-white rounded-3xl"
               >
                 <ProjectCard
                   title={project.title}

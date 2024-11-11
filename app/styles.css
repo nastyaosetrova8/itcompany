@@ -58,13 +58,13 @@ button {
     @apply mb-5 font-roboto text-sm sm:text-base lg:text-5xl leading-7 text-white;
   }
   .titleCl {
-    @apply mb-5 font-semibold text-4xl leading-tight text-stone-950;
+    @apply mb-5 font-semibold text-5xl leading-tight text-stone-950;
   }
   .subTitleCl {
-    @apply mb-6 font-semibold text-xl leading-relaxed text-customTeal;
+    @apply mb-6 font-semibold text-3xl leading-relaxed text-customTeal;
   }
   .descriptionCl {
-    @apply mb-5 leading-7;
+    @apply mb-5 xl:text-[18px] tracking-wide text-stone-800 leading-10;
   }
   /* .imageFadeCl {
     @apply transition-opacity duration-500;

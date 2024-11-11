@@ -18,7 +18,7 @@ const NavigationLink: React.FC<ComponentProps<typeof Link>> = ({
       <Link
         aria-current={isActive ? "page" : undefined}
         className={clsx(
-          "inline-block whitespace-nowrap py-4 px-6 text-s transition-colors rounded-full",
+          "inline-block whitespace-nowrap py-5 px-9 text-xl transition-colors rounded-full",
           isActive ? "bg-customTeal-accent" : "bg-transparent"
         )}
         href={href}

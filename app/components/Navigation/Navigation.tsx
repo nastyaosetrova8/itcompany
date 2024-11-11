@@ -37,7 +37,7 @@ const Navigation = () => {
           </div>
         </div>
       ) : (
-        <nav className="fixed bottom-[34px] left-1/2 -translate-x-1/2 flex justify-center p-2 text-white bg-customTeal rounded-full z-50">
+        <nav className="fixed bottom-[34px] left-1/2 -translate-x-1/2 flex justify-center py-3 px-5 text-white bg-customTeal rounded-full z-50">
           <NavigationLink href="/">{t("home")}</NavigationLink>
           <NavigationLink href="/introduction">
             {t("introduction")}
@@ -45,7 +45,7 @@ const Navigation = () => {
           <NavigationLink href="/projects">{t("projects")}</NavigationLink>
           <NavigationLink href="/services">{t("services")}</NavigationLink>
           <NavigationLink href="/culture">{t("culture")}</NavigationLink>
-          <NavigationLink href="/clients">{t("clients")}</NavigationLink>
+          <NavigationLink href="/contacts">{t("contacts")}</NavigationLink>
         </nav>
       )}
     </>
