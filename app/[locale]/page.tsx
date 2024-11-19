@@ -9,6 +9,7 @@ export default function Home({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
 
   const t = useTranslations("HomePage");
+  const tGeneral = useTranslations("General");
 
   return (
     <section className="bg-main-sectionBG ">
@@ -17,16 +18,16 @@ export default function Home({ params: { locale } }: Props) {
           <h1 className="mainTitleCl">{t("title")}</h1>
           <p className="mainDescriptionCl">{t("description")}</p>
         </div>
-        <div>
+        <div className="xl:max-w-[680px] w-full h-full xl:-mr-[30px] ">
           <video
-            className="w-[680px] h-screen -mr-[30px]"
+            className="w-full h-full xl:object-cover"
             autoPlay
             loop
             muted
             playsInline
           >
             <source src="/videos/mainPage.mp4" type="video/mp4" />
-            Ваш браузер не підтримує відтворення відео.
+            {tGeneral("videoUnsupported")}
           </video>
         </div>
       </div>

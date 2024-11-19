@@ -24,8 +24,9 @@
   "Slogan": {
     "slogan": "Innovation Engineered for Your Success"
   },
-  "Scroll": {
-    "scroll": "Scroll"
+  "General": {
+    "scroll": "Scroll",
+    "videoUnsupported": "Your browser does not support video playback."
   },
   "Navigation": {
     "getStarted": "Get started",
@@ -68,5 +69,17 @@
         "alt": "Images of pages of the hotel website"
       }
     }
+  },
+  "Contacts": {
+    "title": "Contact us",
+    "placeholderName": "Name",
+    "placeholderEmail": "Email",
+    "placeholderMessage": "Message",
+    "required": "Required field",
+    "requiredName": "Minimum 2 symbols",
+    "requiredEmail": "Enter valid email address",
+    "requiredMessage": "Minimum 15 symbols",
+    "acceptTerms": "Accept",
+    "button": "Send"
   }
 }

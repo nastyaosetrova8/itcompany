@@ -18,7 +18,8 @@ const ProjectsPage: React.FC<Props> = () => {
   //   unstable_setRequestLocale(locale);
 
   const t = useTranslations("Projects");
-  const tScroll = useTranslations("Scroll");
+  const tGeneral = useTranslations("General");
+
   const projects = Object.values(t.raw("list")) as IPropsProjectItem[];
 
   const [activeImage, setActiveImage] = useState(projects[0].src);
@@ -81,12 +82,13 @@ const ProjectsPage: React.FC<Props> = () => {
       }
     };
   }, [projects, activeImage]);
+  // }, [projects, activeImage]);
 
   return (
     <section className="h-screen flex items-center justify-center bg-neutral-300">
       <div className="flex items-center h-screen xl:max-w-[90%] w-full bg-[url('/images/containerBGSecondary3.webp')] bg-cover bg-center bg-no-repeat">
         {/* justify-end */}
-        <div className="xl:container relative flex gap-11 justify-between h-[70%] w-[90%] pl-16 pr-11 bg-neutral-100 rounded-3xl ">
+        <div className="xl:container relative flex gap-11 justify-between h-[70%] w-[90%] xl:pl-14 xl:pr-14 bg-neutral-100 rounded-3xl ">
           <div className="pb-11 pt-10 flex xl:max-w-[560px] w-full flex-col">
             {/* xl:max-w-[420px] w-full xl:max-h-[360px] h-full */}
             <h1 className="mainDescriptionCl font-bold text-stone-950">
@@ -149,7 +151,7 @@ const ProjectsPage: React.FC<Props> = () => {
                 <ProjectCard
                   title={project.title}
                   description={project.description}
-                  scrollText={tScroll("scroll")}
+                  scrollText={tGeneral("scroll") || ""}
                 />
               </li>
             ))}
@@ -157,7 +159,7 @@ const ProjectsPage: React.FC<Props> = () => {
 
           <div className="absolute right-0 bottom-0 rotate-90 -translate-y-[500%] translate-x-[20%]">
             <p className="before:content-[''] before:h-[1px] before:w-11 before:mr-3 flex items-center before:bg-stone-950">
-              {tScroll("scroll") || ""}
+              {tGeneral("scroll") || ""}
             </p>
           </div>
         </div>

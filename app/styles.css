@@ -66,6 +66,17 @@ button {
   .descriptionCl {
     @apply mb-5 xl:text-[18px] tracking-wide text-stone-800 leading-10;
   }
+  .inputsCl {
+    @apply py-4 px-5 border-none 
+    bg-neutral-100 focus:outline focus:outline-2 focus:outline-yellow-300
+    rounded-3xl;
+  }
+  .errorWrapperCl {
+    @apply flex items-center h-8 pt-2 pb-4 px-5 text-s leading-5 text-red-900;
+  }
+
+  /* left-0 -bottom-2  */
+
   /* .imageFadeCl {
     @apply transition-opacity duration-500;
   } */
