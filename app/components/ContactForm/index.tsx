@@ -7,6 +7,7 @@ import { sendEmail } from "@/utils/send-email";
 // import Checkbox from "../Checkbox";
 import dynamic from "next/dynamic";
 import { IContacts } from "@/helpers/interfaces";
+import Сheck from "@/public/icons/check.svg";
 
 interface Props {
   t: IContacts;
@@ -32,41 +33,17 @@ const ContactForm: React.FC<Props> = ({ t }) => {
 
   const [isError, setIsError] = useState(false);
 
-  const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = event.target;
-    setValue(name as keyof FormData, value);
-
-    const cookieData = getCookie("contactForm");
-
-    const parsedCookieData = cookieData ? JSON.parse(cookieData as string) : {};
-
-    setCookie(
-      "contactForm",
-      JSON.stringify({ ...parsedCookieData, [name]: value })
-    );
-  };
-
-  // useEffect(() => {
-  //   const savedData = getCookie("contactForm");
-  //   if (savedData) {
-  //     const parsedData = JSON.parse(savedData as string);
-  //     for (const key in parsedData) {
-  //       setValue(key as keyof FormData, parsedData[key]);
-  //     }
-  //   }
-  // }, [setValue]);
-
   const onSubmit = async (data: FormData) => {
     setLoading(true);
     try {
       // const response =
       await sendEmail(data);
       reset();
+      setLoading(false);
       deleteCookie("contactForm");
     } catch (err: any) {
-      setIsError(true);
+      // setIsError(true);
+      console.log(err);
     }
   };
 
@@ -81,9 +58,9 @@ const ContactForm: React.FC<Props> = ({ t }) => {
           {/* <div className="flex gap-7 w-full"> */}
           <div className="w-full">
             <input
-              className="inputsCl w-full h-10"
-              type="text"
+              className="inputsCl h-10 capitalize"
               id="name"
+              type="text"
               placeholder={t.placeholderName}
               {...register("name", {
                 required: `${t.required}`,
@@ -108,9 +85,9 @@ const ContactForm: React.FC<Props> = ({ t }) => {
           </div>
           <div className="w-full">
             <input
-              className="inputsCl w-full h-10"
-              type="email"
+              className="inputsCl h-10"
               id="email"
+              type="email"
               placeholder={t.placeholderEmail}
               {...register("email", {
                 required: `${t.required}`,
@@ -129,7 +106,8 @@ const ContactForm: React.FC<Props> = ({ t }) => {
           {/* </div> */}
           <div className="w-full">
             <textarea
-              className="inputsCl w-full h-28 pt-3 resize-none"
+              className="inputsCl h-28 pt-3 resize-none"
+              autoCapitalize="sentences"
               id="message"
               placeholder={t.placeholderMessage}
               {...register("message", {
@@ -145,14 +123,35 @@ const ContactForm: React.FC<Props> = ({ t }) => {
               {errors?.message && <p>{errors?.message?.message || "Error!"}</p>}
             </div>
           </div>
-          {/* <Checkbox
-            label={t.acceptTerms}
-            name="acceptTerms"
-            register={register}
-            required={true}
-          /> */}
 
-          {/* className="inline-block px-6 py-2 text-white bg-customTeal transition-all hover:bg-customTeal-accent hover:-translate-y-1 hover:scale-110 rounded-3xl" */}
+          <div className="group ">
+            <input
+              id="accept"
+              type="checkbox"
+              // name="acceptTerms"
+              // required={true}
+              className="checkboxCl peer"
+              {...register("accept", {
+                required: `${t.requiredAccept}`,
+              })}
+              aria-required={`${t.requiredAccept}` ? "true" : "false"}
+            />
+            <label
+              className="labelCheckCl descriptionCl text-neutral-100"
+              htmlFor="accept"
+            >
+              <span className="iconCheckWrapCl">
+                <Сheck className="iconCheckCl" />
+              </span>
+              {t.acceptTerms}
+            </label>
+
+            {/* <div className="errorWrapper ml-6 mb-11">
+              {formik.touched.accept && formik.errors.accept ? (
+                <p className="errorStyled">{formik.errors.accept}</p>
+              ) : null}
+            </div> */}
+          </div>
 
           <button
             type="submit"

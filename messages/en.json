@@ -75,11 +75,12 @@
     "placeholderName": "Name",
     "placeholderEmail": "Email",
     "placeholderMessage": "Message",
+    "acceptTerms": "By submitting this form, I consent to the processing of my personal data.",
     "required": "Required field",
     "requiredName": "Minimum 2 symbols",
     "requiredEmail": "Enter valid email address",
     "requiredMessage": "Minimum 15 symbols",
-    "acceptTerms": "Accept",
+    "requiredAccept": "Please accept the agreement to continue",
     "button": "Send"
   }
 }

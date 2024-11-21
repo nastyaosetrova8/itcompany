@@ -76,11 +76,12 @@
     "placeholderName": "Ім'я",
     "placeholderEmail": "Електронна пошта",
     "placeholderMessage": "Повідомлення",
+    "acceptTerms": "Надсилаючи цю форму, я погоджуюся на обробку моїх персональних даних.",
     "required": "Обов'язкове поле",
     "requiredName": "Мінімум 2 символи",
     "requiredEmail": "Введіть коректну електронну адресу",
     "requiredMessage": "Мінімум 15 символів",
-    "acceptTerms": "Приймаю",
+    "requiredAccept": "Будь ласка, прийміть угоду, щоб продовжити",
     "button": "Hадіслати"
   }
 }

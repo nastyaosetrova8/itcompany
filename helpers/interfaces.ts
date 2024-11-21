@@ -14,10 +14,11 @@ export interface IContacts {
   placeholderName: string;
   placeholderEmail: string;
   placeholderMessage: string;
+  acceptTerms: string;
   required: string;
   requiredName: string;
   requiredEmail: string;
   requiredMessage: string;
-  acceptTerms?: string;
+  requiredAccept: string;
   button: string;
 }
