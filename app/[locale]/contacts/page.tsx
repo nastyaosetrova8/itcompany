@@ -27,7 +27,7 @@ const ContactsPage: React.FC<Props> = async ({ params: { locale } }) => {
     <section className="h-screen flex items-center justify-center bg-neutral-300">
       <div className="flex items-center h-screen xl:max-w-[90%] w-full bg-[url('/images/containerBGSecondary3.webp')] bg-cover bg-center bg-no-repeat">
         {/* justify-end */}
-        <div className="xl:container relative flex gap-11 justify-between h-[70%] w-[90%] xl:pl-14 xl:pr-14 bg-neutral-100 rounded-3xl ">
+        <div className="xl:container flex justify-center items-center h-[70%] w-[90%] xl:pl-14 xl:pr-14 bg-neutral-100 rounded-3xl ">
           <ContactForm t={tContact} />
         </div>
       </div>

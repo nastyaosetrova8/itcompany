@@ -44,7 +44,7 @@ const Navigation = () => {
           </NavigationLink>
           <NavigationLink href="/projects">{t("projects")}</NavigationLink>
           <NavigationLink href="/services">{t("services")}</NavigationLink>
-          <NavigationLink href="/culture">{t("culture")}</NavigationLink>
+          {/* <NavigationLink href="/culture">{t("culture")}</NavigationLink> */}
           <NavigationLink href="/contacts">{t("contacts")}</NavigationLink>
         </nav>
       )}

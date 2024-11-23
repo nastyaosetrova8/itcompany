@@ -1,5 +1,10 @@
 import { StaticImageData } from "next/image";
 
+export interface IGeneral {
+  scroll?: () => void;
+  videoUnsupported?: () => void;
+}
+
 export interface IPropsProjectItem {
   id?: string;
   title?: string;
@@ -19,6 +24,16 @@ export interface IContacts {
   requiredName: string;
   requiredEmail: string;
   requiredMessage: string;
-  requiredAccept: string;
+  requiredAccept?: string;
   button: string;
+  success?: string;
+  content?: string;
+}
+
+export interface IServices {
+  id?: string;
+  title?: string;
+  description?: string;
+  src?: string | StaticImageData;
+  alt?: string;
 }

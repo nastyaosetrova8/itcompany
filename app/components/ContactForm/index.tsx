@@ -26,7 +26,9 @@ const ContactForm: React.FC<Props> = ({ t }) => {
     setValue,
     reset,
     formState: { errors, isValid },
-  } = useForm<FormData>({ mode: "onChange" });
+    // } = useForm<FormData>({ mode: "onChange" });
+  } = useForm<FormData>({ mode: "all" });
+
   console.log("🚀 ~ errors:", errors);
 
   const [loading, setLoading] = useState(false);
@@ -44,6 +46,7 @@ const ContactForm: React.FC<Props> = ({ t }) => {
     } catch (err: any) {
       // setIsError(true);
       console.log(err);
+      setLoading(false);
     }
   };
 
@@ -68,13 +71,17 @@ const ContactForm: React.FC<Props> = ({ t }) => {
                   value: 2,
                   message: `${t.requiredName}`,
                 },
+                // validate: {
+                //   isNotEmpty: (value) => {
+                //     if (value.trim() === "") {
+                //       return `${t.requiredName}`;
+                //     }
+                //     return true;
+                //   },
+                // },
                 validate: {
-                  isNotEmpty: (value) => {
-                    if (value.trim() === "") {
-                      return `${t.requiredName}`;
-                    }
-                    return true;
-                  },
+                  isNotEmpty: (value) =>
+                    value.trim() !== "" || `${t.requiredName}`,
                 },
               })}
               // onChange={handleChange}
@@ -146,11 +153,7 @@ const ContactForm: React.FC<Props> = ({ t }) => {
               {t.acceptTerms}
             </label>
 
-            {/* <div className="errorWrapper ml-6 mb-11">
-              {formik.touched.accept && formik.errors.accept ? (
-                <p className="errorStyled">{formik.errors.accept}</p>
-              ) : null}
-            </div> */}
+            {/* </div> */}
           </div>
 
           <button
