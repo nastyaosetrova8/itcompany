@@ -31,7 +31,7 @@ export interface IContacts {
 }
 
 export interface IServices {
-  id?: string;
+  id?: number;
   title?: string;
   description?: string;
   src?: string | StaticImageData;

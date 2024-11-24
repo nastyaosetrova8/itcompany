@@ -1,8 +1,10 @@
 import ServicesDescription from "@/app/components/ServicesDescription";
 import ServicesImage from "@/app/components/ServicesImage";
+import ServicesWrapper from "@/app/components/ServicesWrapper";
 import { IServices } from "@/helpers/interfaces";
-import { link } from "fs";
+import { useServiceLogic } from "@/helpers/useServiceLogic";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 import React from "react";
 
 type Props = {
@@ -16,29 +18,29 @@ const ServicesPage: React.FC<Props> = async ({ params: { locale } }) => {
   const tGeneral = await getTranslations("General");
   const services = Object.values(t.raw("list")) as IServices[];
 
+  //   const { handleClick, foundService } = useServiceLogic(services);
+  // ------------------------------------------
+  //   const [selectedServiceItem, setSelectedServiceItem] = useState(1);
+
+  //   const handleClick = (id: number) => {
+  //     setSelectedServiceItem(id);
+  //   };
+  // const findService = () => {
+  //   return services.find(
+  //     (serviceItem) =>
+  //       serviceItem.id !== undefined && serviceItem.id === selectedServiceItem
+  //   );
+  // };
+  // const foundService = findService();
+  // if (!foundService) {
+  //   console.error("Service not found!");
+  // }
+
   return (
     <section className="h-screen flex items-center justify-center bg-neutral-300">
       <div className="flex items-center h-screen xl:max-w-[90%] w-full bg-[url('/images/containerBGSecondary3.webp')] bg-cover bg-center bg-no-repeat">
         {/* justify-end */}
-        <div className="xl:container flex justify-center items-center h-[70%] w-[90%] xl:pl-14 xl:pr-14 bg-green-200 rounded-3xl ">
-          {/* className="xl:container absolute top-[50%] -translate-y-[50%] left-[6%] flex gap-11 justify-between h-[70%] w-[90%]  z-10" */}
-          {/* 
-          <div className="absolute left-[6%] xl:max-w-[700px] w-full xl:max-h-[700px] h-full bg-neutral-100 rounded-3xl z-10"></div> */}
-
-          {/* <ul className="xl:h-[388px] py-10 px-14 bg-white rounded-3xl">
-            {services.map((service) => (
-              <li key={service.id}>
-                <ServicesDescription
-                  t={t}
-                  title={service.title || ""}
-                  description={service.description || ""}
-                  tGeneral={tGeneral}
-                />
-              </li>
-            ))}
-          </ul> */}
-          {/* <ServicesImage t={t} /> */}
-        </div>
+        <ServicesWrapper services={services} t={t} tGeneral={tGeneral} />
       </div>
     </section>
   );

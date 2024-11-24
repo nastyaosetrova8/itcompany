@@ -18,7 +18,7 @@ const ServicesDescription: React.FC<Props> = ({
     <div className="xl:max-w-[700px] w-full xl:max-h-[700px] h-full bg-red-400  rounded-3xl z-10">
       {/* bg-neutral-100 */}
       <div className="w-full h-full px-16 pt-16 pb-40 overflow-y-auto scroll-containerCl">
-        <h1 className="titleCl">{t("title") || ""}</h1>
+        {/* <h1 className="titleCl">{t("title") || ""}</h1> */}
         <p className="titleCl">{title}</p>
         <p className="descriptionCl">{description}</p>
       </div>
