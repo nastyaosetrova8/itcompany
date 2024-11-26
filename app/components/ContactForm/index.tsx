@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { setCookie, getCookie, deleteCookie } from "cookies-next";
+
 import { sendEmail } from "@/utils/send-email";
-// import Checkbox from "../Checkbox";
 import dynamic from "next/dynamic";
 import { IContacts } from "@/helpers/interfaces";
 import Сheck from "@/public/icons/check.svg";
@@ -29,7 +28,7 @@ const ContactForm: React.FC<Props> = ({ t }) => {
     // } = useForm<FormData>({ mode: "onChange" });
   } = useForm<FormData>({ mode: "all" });
 
-  console.log("🚀 ~ errors:", errors);
+  // console.log("🚀 ~ errors:", errors);
 
   const [loading, setLoading] = useState(false);
 
@@ -42,7 +41,6 @@ const ContactForm: React.FC<Props> = ({ t }) => {
       await sendEmail(data);
       reset();
       setLoading(false);
-      deleteCookie("contactForm");
     } catch (err: any) {
       // setIsError(true);
       console.log(err);
@@ -138,7 +136,7 @@ const ContactForm: React.FC<Props> = ({ t }) => {
               // name="acceptTerms"
               // required={true}
               className="checkboxCl peer"
-              {...register("accept", {
+              {...register("accent", {
                 required: `${t.requiredAccept}`,
               })}
               aria-required={`${t.requiredAccept}` ? "true" : "false"}

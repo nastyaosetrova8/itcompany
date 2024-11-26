@@ -1,6 +1,6 @@
 "use client";
 
-import ProjectCard from "@/app/components/ProjectCard/ProjectCard";
+import ProjectCard from "@/app/components/ProjectCard";
 import { IPropsProjectItem } from "@/helpers/interfaces";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";

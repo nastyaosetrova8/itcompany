@@ -15,8 +15,15 @@ const ServicesPage: React.FC<Props> = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
 
   const t = await getTranslations("Services");
-  const tGeneral = await getTranslations("General");
+  const t2 = await getTranslations("General");
   const services = Object.values(t.raw("list")) as IServices[];
+
+  const tService = {
+    title: t("title"),
+  };
+  const tGeneral = {
+    scroll: t2("scroll"),
+  };
 
   //   const { handleClick, foundService } = useServiceLogic(services);
   // ------------------------------------------
@@ -40,7 +47,8 @@ const ServicesPage: React.FC<Props> = async ({ params: { locale } }) => {
     <section className="h-screen flex items-center justify-center bg-neutral-300">
       <div className="flex items-center h-screen xl:max-w-[90%] w-full bg-[url('/images/containerBGSecondary3.webp')] bg-cover bg-center bg-no-repeat">
         {/* justify-end */}
-        <ServicesWrapper services={services} t={t} tGeneral={tGeneral} />
+        <ServicesWrapper services={services} />
+        {/* t={tService} t2={tGeneral} */}
       </div>
     </section>
   );
