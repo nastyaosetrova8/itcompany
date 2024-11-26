@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import { sendEmail } from "@/utils/send-email";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import { IContacts } from "@/helpers/interfaces";
 import Сheck from "@/public/icons/check.svg";
 
@@ -22,7 +22,7 @@ const ContactForm: React.FC<Props> = ({ t }) => {
   const {
     register,
     handleSubmit,
-    setValue,
+    // setValue,
     reset,
     formState: { errors, isValid },
     // } = useForm<FormData>({ mode: "onChange" });
@@ -32,7 +32,7 @@ const ContactForm: React.FC<Props> = ({ t }) => {
 
   const [loading, setLoading] = useState(false);
 
-  const [isError, setIsError] = useState(false);
+  // const [isError, setIsError] = useState(false);
 
   const onSubmit = async (data: FormData) => {
     setLoading(true);
@@ -136,10 +136,10 @@ const ContactForm: React.FC<Props> = ({ t }) => {
               // name="acceptTerms"
               // required={true}
               className="checkboxCl peer"
-              {...register("accent", {
-                required: `${t.requiredAccept}`,
-              })}
-              aria-required={`${t.requiredAccept}` ? "true" : "false"}
+              // {...register("accent", {
+              //   required: `${t.requiredAccept}`,
+              // })}
+              // aria-required={`${t.requiredAccept}` ? "true" : "false"}
             />
             <label
               className="labelCheckCl descriptionCl text-neutral-100"

@@ -1,6 +1,6 @@
 "use client";
 
-import { IGeneral, IServices } from "@/helpers/interfaces";
+import { IServices } from "@/helpers/interfaces";
 import { useServiceLogic } from "@/helpers/useServiceLogic";
 import ServicesDescription from "../ServicesDescription";
 import Image from "next/image";

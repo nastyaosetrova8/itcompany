@@ -1,10 +1,10 @@
-import ServicesDescription from "@/app/components/ServicesDescription";
-import ServicesImage from "@/app/components/ServicesImage";
+// import ServicesDescription from "@/app/components/ServicesDescription";
+// import ServicesImage from "@/app/components/ServicesImage";
 import ServicesWrapper from "@/app/components/ServicesWrapper";
 import { IServices } from "@/helpers/interfaces";
-import { useServiceLogic } from "@/helpers/useServiceLogic";
+// import { useServiceLogic } from "@/helpers/useServiceLogic";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 
 type Props = {
@@ -15,15 +15,15 @@ const ServicesPage: React.FC<Props> = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
 
   const t = await getTranslations("Services");
-  const t2 = await getTranslations("General");
+  //   const t2 = await getTranslations("General");
   const services = Object.values(t.raw("list")) as IServices[];
 
-  const tService = {
-    title: t("title"),
-  };
-  const tGeneral = {
-    scroll: t2("scroll"),
-  };
+  //   const tService = {
+  //     title: t("title"),
+  //   };
+  //   const tGeneral = {
+  //     scroll: t2("scroll"),
+  //   };
 
   //   const { handleClick, foundService } = useServiceLogic(services);
   // ------------------------------------------

@@ -1,4 +1,4 @@
-import { IGeneral, IServices } from "@/helpers/interfaces";
+// import { IGeneral, IServices } from "@/helpers/interfaces";
 import React from "react";
 
 interface Props {
