@@ -41,7 +41,7 @@ const ContactForm: React.FC<Props> = ({ t }) => {
       await sendEmail(data);
       reset();
       setLoading(false);
-    } catch (err: any) {
+    } catch (err) {
       // setIsError(true);
       console.log(err);
       setLoading(false);
