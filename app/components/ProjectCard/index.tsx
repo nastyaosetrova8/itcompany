@@ -30,9 +30,8 @@ const ProjectCard: React.FC<IPropsProjectItem> = ({
           {/* flex-grow  max-h-[250px] */}
           {description}
         </p>
-
         {showScrollText && (
-          <div className="absolute right-0 bottom-0 rotate-90 -translate-y-[500%] translate-x-[20%]">
+          <div className="absolute right-0 bottom-0 rotate-90 -translate-y-[730%] translate-x-[20%]">
             <p className="before:content-[''] before:h-[1px] before:w-11 before:mr-3 flex items-center before:bg-stone-950">
               {scrollText}
             </p>

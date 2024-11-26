@@ -7,7 +7,7 @@ type Props = {
 const IntroductionPage: React.FC<Props> = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
   const t = await getTranslations("Introduction");
-  const tScroll = await getTranslations("Scroll");
+  const tGeneral = await getTranslations("General");
 
   return (
     <section className="h-screen flex items-center justify-center bg-neutral-300">
@@ -27,7 +27,7 @@ const IntroductionPage: React.FC<Props> = async ({ params: { locale } }) => {
             </div>
             <div className="absolute right-0 bottom-0 rotate-90 -translate-y-[500%] translate-x-[20%]">
               <p className="before:content-[''] before:h-[1px] before:w-11 before:mr-3 flex items-center before:bg-stone-950">
-                {tScroll("scroll") || ""}
+                {tGeneral("scroll") || ""}
               </p>
             </div>
           </div>
@@ -41,7 +41,7 @@ const IntroductionPage: React.FC<Props> = async ({ params: { locale } }) => {
             playsInline
           >
             <source src="/videos/introductionPage.mp4" type="video/mp4" />
-            Ваш браузер не підтримує відтворення відео.
+            {tGeneral("videoUnsupported")}
           </video>
         </div>
         {/* </div> */}
